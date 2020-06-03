@@ -103,7 +103,7 @@ namespace MqttNetServer
                                 //没有分割文件
                                 if (string.IsNullOrEmpty(item.FileId))
                                 {
-                                    resultInfo = AffairUploadFile(item.FileBase64Str, item.FileName);
+                                    resultInfo = AffairUploadFile(item.FileBase64Str, item.FileName, model.Url);
                                 }
                                 //分割的文件
 
@@ -134,7 +134,7 @@ namespace MqttNetServer
                                             //Base64文件组合
                                             var array = ListFile[item.FileId].OrderBy(o => o.FileIndex).Select(o => o.FileBase64Str).ToList();
                                             var base64Str = string.Join("", array);
-                                            resultInfo = AffairUploadFile(base64Str, item.FileName);
+                                            resultInfo = AffairUploadFile(base64Str, item.FileName, model.Url);
                                             ListFile.Remove(item.FileId);
                                         }
                                         else
@@ -219,14 +219,14 @@ namespace MqttNetServer
         /// </summary>
         /// <param name="file">文件流</param>
         /// <returns>地址</returns>
-        public static string AffairUploadFile(string fileBase64Str, string fileName)
+        public static string AffairUploadFile(string fileBase64Str, string fileName, string upLoadUrl)
         {
             fileName = fileName.Replace(',', '-').Replace('/', '-').Replace('\\', '-');
             if (fileName.LastIndexOf('\\') > -1)
             {
                 fileName = fileName.Substring(fileName.LastIndexOf('\\') + 1);
             }
-            string requestUrl = ApiAddress + "/Tool/uploadFile?" + "fileName=" + fileName;
+            string requestUrl = ApiAddress + upLoadUrl + "?" + "fileName=" + fileName;
             HttpWebRequest request = WebRequest.Create(requestUrl) as HttpWebRequest;
             CookieContainer cookieContainer = new CookieContainer();
             request.CookieContainer = cookieContainer;
