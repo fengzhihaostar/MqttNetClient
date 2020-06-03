@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttNetClient", "MqttNetClient\MqttNetClient.csproj", "{D7AF9B70-3EE1-4A62-8295-62E16E5ED1A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttNetServer", "MqttServer\MqttNetServer.csproj", "{D8CC517D-41D7-43DE-8076-4699380CCB04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQTTnet.Core", "MQTTnet-2.4.0\MQTTnet.Core\MQTTnet.Core.csproj", "{E77F0F9C-D61B-47BE-8110-E9F54A6F5A99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7AF9B70-3EE1-4A62-8295-62E16E5ED1A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7AF9B70-3EE1-4A62-8295-62E16E5ED1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7AF9B70-3EE1-4A62-8295-62E16E5ED1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7AF9B70-3EE1-4A62-8295-62E16E5ED1A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CC517D-41D7-43DE-8076-4699380CCB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CC517D-41D7-43DE-8076-4699380CCB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CC517D-41D7-43DE-8076-4699380CCB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CC517D-41D7-43DE-8076-4699380CCB04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77F0F9C-D61B-47BE-8110-E9F54A6F5A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77F0F9C-D61B-47BE-8110-E9F54A6F5A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77F0F9C-D61B-47BE-8110-E9F54A6F5A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77F0F9C-D61B-47BE-8110-E9F54A6F5A99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {DF607C0D-1763-42C9-8F59-2674E0C3AB3D}
+	EndGlobalSection
+EndGlobal
